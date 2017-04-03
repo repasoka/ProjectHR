@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #E0E0E0;
+}
+#imgdiv{
+	background-color: #CCCC33;
+}
+img{
+	display: block;
+	margin: auto;
+	padding: 15px;
+}
+#logdiv{
+	padding: 220px 15px;
+}
+#logform{
+	background-color: white;
+	padding: 15px;
+}
+#logbtn{
+	background-color: #CCCC33;
+	margin-left: 72%;
+}
+.mui--divider-bottom{
+	margin-bottom: 15px;
+}
