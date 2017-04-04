@@ -19,8 +19,8 @@
         },
         error: function (data) {
             console.log(data);
-           alert('unSuccessfully Loaded');
-}
+            $("#logerror").text("Invalid Username or Password. Please try again.");
+        }
         });
     });
 });

@@ -19,9 +19,11 @@ img{
 	padding: 15px;
 }
 #logbtn{
-	background-color: #CCCC33;
-	margin-left: 72%;
+	background-color: #CCCC33;	
 }
 .mui--divider-bottom{
 	margin-bottom: 15px;
+}
+#logerror{
+	color: red;
 }
