@@ -1,12 +1,13 @@
 body {
+
 	margin: 0;
 	padding: 0;
-	background-color: #E0E0E0;
+	/*background-color: #E0E0E0;*/
 }
 #imgdiv{
 	background-color: #CCCC33;
 }
-img{
+#logolog{
 	display: block;
 	margin: auto;
 	padding: 15px;
@@ -19,11 +20,125 @@ img{
 	padding: 15px;
 }
 #logbtn{
-	background-color: #CCCC33;	
+	background-color: #CCCC33;
+    cursor: pointer;
+width: 100%;
+height: 40%;
+
 }
 .mui--divider-bottom{
 	margin-bottom: 15px;
 }
 #logerror{
 	color: red;
+}
+#log{
+	background-color: #E0E0E0;
+	height: 200%;
+}
+#itw{
+	display: none;
+	height: 100%;
+
+}
+buttons {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+
+/**
+ * Sidebar CSS
+ */
+
+
+ .mui-btn{
+ text-align: -webkit-center;
+ font-family: arial;
+text-transform:capitalize; 
+cursor: pointer;
+width: 100%;
+}
+
+
+ }
+ 
+ #tableMyinterviews{
+  width:80%;
+ }
+
+ #tableMIH{
+  font-family:initial;
+  color:#B9B9B9;
+ }
+ 
+ #head{
+width: 100%;
+height: 20%;
+background-color: #CDDC30;
+border-radius: 2px;
+border-bottom:2px lightgreen;
+}
+ 
+ #topcontent{
+  background-color: #F0F0F0;
+  width: 100%;
+  height: 40%;
+  padding-top:1%;
+}
+   @media (min-width: 768px){
+#topcontent{
+ padding-left: 10%;
+    margin-left: 180px;
+}
+}
+ #buttonsleft{
+ 
+ }
+ 
+ #logo{
+ position: relative;
+    left: 25%;
+    top: 28%;
+ width:  
+}
+
+#sidebar {
+  background-color: white;
+   box-shadow: 5px 5px 5px #888888;
+   border-radius: 10px;
+    font-family: arial;
+}
+
+@media (min-width: 768px) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 18%;
+    height: 100%;
+      }
+}
+#headrow{
+width:100%;
+}
+
+#editInterview{
+  font-family: arial;
+  font-size: xx-large;
+  color:grey;
+  opacity: 0.9;
+  padding-left: 30%;
+  padding-top: 10%;
+}
+
+/**
+ * Content CSS
+ */
+@media (min-width: 768px) {
+  #content {
+    padding-left: 10%;
+    margin-left: 180px;
+  }
 }

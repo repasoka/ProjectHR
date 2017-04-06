@@ -9,16 +9,19 @@
     <script src="https://cdn.muicss.com/mui-0.9.12/js/mui.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      <script type="text/javascript" src="script.js"></script>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
      <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+ <body>
+<div id="log">
   <div class="mui-container-fluid"> 
   <div class="mui-row">
     <div class="mui-col-xs-6 mui-col-md-4"></div>
     
     <div class="mui-col-xs-6 mui-col-md-4" id="logdiv">
        <div id="imgdiv">
-         <img src="hiregl_logo.png">
+         <img id="logolog" src="hiregl_logo.png">
        </div>  
       <form class="mui-form" id="logform">
       <div class="mui--divider-bottom">
@@ -45,5 +48,55 @@
   <div class="mui-col-xs-6 mui-col-md-4"></div>
   </div>
   </div>
+  </div>
+
+  <div id="itw">
+    
+    <div id="sidebar">
+<div id="head" class="mui-row"><img id="logo" src="hiregl_logo.png"></div>
+      <div class="mui--text-white mui--text-display1 mui--align-vertical">
+        
+
+        <div id="buttonsleft">
+     
+     
+      <button  class="mui-btn mui-btn--flat"><i class="mdi mdi-inbox-arrow-down mdi-24px mdi-dark"></i> My interviews </button>
+
+     <button  class="mui-btn mui-btn--flat"><i class="mdi mdi-plus mdi-24px mdi-dark"></i> New interview</button>
+     
+   </div> 
+
+  
+      </div>
+    </div>
+
+
+    <div id="topcontent" class="mui-container-fluid">
+  <div  id= "headrow" class="mui-row"><p id="editInterview">My interviews</p></div>
+   </div>
+    
+<div class="mui-divider"></div>
+<div id="content" class="mui-container-fluid">
+  <div class="mui-row">
+        <div class="mui-col-sm-12 mui-col-sm-offset-1">
+ <br>
+ <br>
+<div class="mui-row">
+<table id="tableMyinterviews" class="mui-table mui-table--bordered">
+  
+   <tr id="tableMIH">
+      <th></th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Status</th>
+      <th>Action</th>
+       </tr>
+  </table>
+</div>
+</div>
+    </div>
+
+</div>
   </body>
 </html>

@@ -15,12 +15,15 @@
         data:JSON.stringify({"userName": userNamex,"password": passwordx}),
         success:function(data){
             console.log(data);
-            alert('Successfully Loaded');
-        },
+            $("#itw").show();
+            $("#log").hide();
+
+                    },
         error: function (data) {
             console.log(data);
             $("#logerror").text("Invalid Username or Password. Please try again.");
         }
+
         });
     });
 });
