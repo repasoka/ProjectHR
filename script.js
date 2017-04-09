@@ -1,11 +1,17 @@
  $(document).ready(function(){
 
+       var token;
+
        $("#logbtn").click(function(e){
           e.preventDefault();
      
     var userNamex = $('#user-name').val();
-    var passwordx = $('#passwordA').val(); 
+    var passwordx = $('#passwordA').val();
 
+     $('#user-name').val("");
+     $('#passwordA').val(""); 
+     $("#logerror").text("");
+     
     var root = 'http://localhost:8081/api';
 
      $.ajax({
@@ -17,14 +23,15 @@
             console.log(data);
             $("#itw").show();
             $("#log").hide();
-            
+            token = data.token;
+
            $.ajax({
 
             url: root + '/locations/',
             method: 'GET',
             data:JSON.parse,
              beforeSend : function( xhr ) {
-            xhr.setRequestHeader( 'Authorization', 'BEARER ' +  data.token );
+            xhr.setRequestHeader( 'Authorization', 'BEARER ' +  token );
         }
 
             }).then(function(data) {
@@ -51,6 +58,9 @@ var root = 'http://localhost:8081/api';
      $.ajax({
         url: root +'/auth/logout/',
         type:'POST',
+         beforeSend : function( xhr ) {
+            xhr.setRequestHeader( 'Authorization', 'BEARER ' +  token );
+        },
         success:function(data){
             console.log(data);
             $("#itw").hide();
@@ -59,7 +69,7 @@ var root = 'http://localhost:8081/api';
                     },
         error: function (data) {
             console.log(data);
-           alert("Logout imposible");
+           alert("Logout failed");
         }
         });
      
