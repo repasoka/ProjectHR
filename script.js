@@ -22,7 +22,8 @@
         success:function(data){
             console.log(data);
             $("#itw").show();
-            $("#log").hide();
+            $("#log, #itw2").hide();
+        
             token = data.token;
 
            $.ajax({
@@ -46,12 +47,19 @@
             $("#logerror").text("Invalid Username or Password. Please try again.");
         }
         });
-
-
-        
-
         
     });
+
+       $("#btnmyinterview").click(function(){
+$("#contentmyinterview").show();
+$("#itw2").hide();
+});
+      $("#btnnewinterview").click(function(){
+$("#itw2").show();
+$("#contentmyinterview").hide();
+});
+
+
        $("#logout").click(function(){
           
 var root = 'http://localhost:8081/api';
