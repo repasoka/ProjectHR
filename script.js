@@ -21,8 +21,8 @@
         data:JSON.stringify({"userName": userNamex,"password": passwordx}),
         success:function(data){
             console.log(data);
-            $("#itw").show();
-            $("#log, #itw2").hide();
+            $("#itw, #headrow").show();
+            $("#log, #itw2, #editInterview2, #headrow2").hide();
         
             token = data.token;
 
@@ -51,12 +51,12 @@
     });
 
        $("#btnmyinterview").click(function(){
-$("#contentmyinterview").show();
-$("#itw2").hide();
+$("#contentmyinterview, #headrow").show();
+$("#itw2, #headrow2").hide();
 });
       $("#btnnewinterview").click(function(){
-$("#itw2").show();
-$("#contentmyinterview").hide();
+$("#itw2, #headrow2").show();
+$("#contentmyinterview, #headrow").hide();
 });
 
 
@@ -71,7 +71,7 @@ var root = 'http://localhost:8081/api';
         },
         success:function(data){
             console.log(data);
-            $("#itw").hide();
+            $("#itw, #itw2").hide();
             $("#log").show();
             
                     },

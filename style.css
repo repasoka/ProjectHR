@@ -102,7 +102,6 @@ border-bottom:2px lightgreen;
 }
 
 
-
 }
  #buttonsleft{
  
@@ -135,6 +134,9 @@ border-bottom:2px lightgreen;
 #headrow{
 width:100%;
 }
+#headrow2{
+width:100%;
+}
 
 #editInterview{
   font-family: arial;
@@ -143,6 +145,7 @@ width:100%;
   opacity: 0.9;
  
 }
+
 
 
 
