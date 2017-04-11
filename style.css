@@ -5,7 +5,7 @@ body {
 	/*background-color: #E0E0E0;*/
 }
 #imgdiv{
-	background-color: #CCCC33;
+	background-color: #CDDC30;
 }
 #logolog{
 	display: block;
@@ -20,7 +20,7 @@ body {
 	padding: 15px;
 }
 #logbtn{
-	background-color: #CCCC33;
+	background-color: #CDDC30;
   cursor: pointer;
   width: 70%;
   margin-left:30%; 
@@ -203,7 +203,36 @@ left:60%;
 top:30%;
 width:25%;
 height:100%;
+margin-bottom: 20px;
 }
 #itw2{
   display: none;
+}
+ #footerrow{
+ padding-top: 10%; 
+  background-color: #F0F0F0;
+ width: 270%;
+  height: 20%;
+  position: absolute;
+  left: -219.6%;
+
+}
+   @media (min-width: 768px){
+#footerrow{
+ 
+ padding-left: 10%;
+    margin-left: 180px;
+}
+}
+#cancelNI{
+  position:relative;
+  left:62%;
+   margin:30px 0;
+  width: 15%;
+}
+ #saveNI{
+    width: 15%;
+background-color: #CDDC30;
+   position:relative;
+  left:63%;
 }

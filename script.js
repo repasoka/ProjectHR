@@ -1,6 +1,15 @@
  $(document).ready(function(){
 
        var token;
+        function activateModal() {
+   
+    var modalEl = document.createElement('div');
+    modalEl.style.width = '400px';
+    modalEl.style.height = '300px';
+    modalEl.style.margin = '100px auto';
+    modalEl.style.backgroundColor = '#fff';
+    mui.overlay('on', modalEl);
+  };
 
        $("#logbtn").click(function(e){
           e.preventDefault();
@@ -49,7 +58,7 @@
         });
         
     });
-
+  
        $("#btnmyinterview").click(function(){
 $("#contentmyinterview, #headrow").show();
 $("#itw2, #headrow2").hide();
@@ -58,6 +67,8 @@ $("#itw2, #headrow2").hide();
 $("#itw2, #headrow2").show();
 $("#contentmyinterview, #headrow").hide();
 });
+
+   
 
 
        $("#logout").click(function(){
