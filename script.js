@@ -1,15 +1,7 @@
  $(document).ready(function(){
 
        var token;
-        function activateModal() {
-   
-    var modalEl = document.createElement('div');
-    modalEl.style.width = '400px';
-    modalEl.style.height = '300px';
-    modalEl.style.margin = '100px auto';
-    modalEl.style.backgroundColor = '#fff';
-    mui.overlay('on', modalEl);
-  };
+    
 
        $("#logbtn").click(function(e){
           e.preventDefault();
@@ -32,7 +24,7 @@
             console.log(data);
             $("#itw, #headrow").show();
             $("#log, #itw2, #editInterview2, #headrow2").hide();
-        
+      
             token = data.token;
 
            $.ajax({
@@ -58,6 +50,17 @@
         });
         
     });
+
+           $("#buttonmodalwindow").click (function activateModal() {
+   
+    var modalEl = document.createElement('div');
+    modalEl.style.width = '600px';
+    modalEl.style.height = '500px';
+    modalEl.style.margin = '100px auto';
+    modalEl.style.backgroundColor = '#fff';
+    modalEl.style.h2 = 'Candidate'
+    mui.overlay('on', modalEl);
+  });
   
        $("#btnmyinterview").click(function(){
 $("#contentmyinterview, #headrow").show();
