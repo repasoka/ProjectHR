@@ -91,7 +91,7 @@
   
    <tr id="tableMIH">
       <th></th>
-      <th></th>
+      <th>Name</th>
       <th>Phone</th>
       <th>Email</th>
       <th>Status</th>
@@ -119,28 +119,28 @@
 <form id="candidate" class= "candidateform" class="mui-form">
  <legend id="legCandidate">CANDIDATE</legend>
   <span class="nameinputs"><div class="mui-textfield">Name
-   <input  class="inp" type="text" placeholder="Enter Name">
+   <input  id= "inpname" class="inp" type="text" placeholder="Enter Name">
   </div>
   <div class="mui-textfield">Surname
-    <input class="inp" type="text" placeholder="Enter Surname">
+    <input id= "inpsurname" class="inp" type="text" placeholder="Enter Surname">
   </div>
   <div class="mui-textfield">Phone
-  <input class="inp" type="text" placeholder="Enter phone number">
+  <input id= "inpphone" class="inp" type="text" placeholder="Enter phone number">
   </div>
   <div class="mui-textfield">Email
-    <input class="inp" type="text" placeholder="Enter Email"> 
+    <input id= "inpemail" class="inp" type="text" placeholder="Enter Email"> 
   </div>
   <div class="mui-textfield">Skype
-    <input class="inp" type="text" placeholder="Enter Skype ID">
+    <input id= "inpskype" class="inp" type="text" placeholder="Enter Skype ID">
   </div>
   <div class="mui-textfield" >Position
-    <input class="inp" type="text" placeholder="Choose Position" list="position">
+    <input id= "inpposition" class="inp" type="text" placeholder="Choose Position" list="position">
     <datalist id="position">
       <option value="CIO">
       <option value="WebDeveloper">
       <option value="Designer">
-      <option value="bla">
-      <option value="bla2">
+      <option value="Architect">
+      <option value="Personal manager">
     </datalist>
   </div>
 
@@ -149,20 +149,31 @@
 <form id="interviewformID" class="interviewform" class="mui-form">
   <legend id="legCandidate">INTERVIEW</legend>
   <span class="nameinputs"><div class="mui-textfield">Date
-   <input  class="inp" type="text" placeholder="Enter Date">
+   <input  id= "inpdate" class="inp" type="text" placeholder="Enter Date">
   </div>
   <div class="mui-textfield">Time
-    <input class="inp" type="text" placeholder="Enter Time">
+    <input id= "inptime" class="inp" type="text" placeholder="Enter Time">
   </div>
   <div class="mui-textfield">Location
-  <input class="mui-btn mui-btn--flat" data-mui-toggle="dropdown" type="mui-btn--flat" placeholder="Enter Location">
-
+  <input id= "inplocation" class="inp" type="text" placeholder="Enter Location" list="location">
+<datalist id="location">
+      <option value="KOSICE">
+      <option value="BRATISLAVA">
+      <option value="BANSKA BYSTRICA">
+  
+    </datalist>
 
   <div class="mui-textfield">Room
-    <input class="inp" type="text" placeholder="Enter Room">
+    <input id= "inproom" class="inp" type="text" placeholder="Enter Room">
   </div>
   <div class="mui-textfield">Assignet person
-    <input class="inp" type="text" placeholder="Choose person">
+    <input id= "inpassignedperson" class="inp" type="text" placeholder="Choose person" list="assigned">
+    <datalist id="assigned">
+      <option value="CIO">
+      <option value="Manager">
+      <option value="senior web developer">
+  
+    </datalist>
   </div>
  
 </span></form>
