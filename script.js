@@ -181,7 +181,7 @@ $("#saveNI").click(function () {
             }
         };
 
-
+alert("bla2");
         $.ajax({
             url: root + '/interviews',
             type: 'POST',
