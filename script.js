@@ -177,16 +177,19 @@ $("#saveNI").click(function () {
                 "dateTime": dateTime,
                 "location": location,
                 "room": room,
-                "userId": assigned
+                
             }
-        };
+        }
+
+         
+
 
 alert("bla2");
         $.ajax({
             url: root + '/interviews',
             type: 'POST',
             contentType: 'application/json',
-            data: JSON.stringify(objcandidate),
+           data: JSON.stringify(objcandidate),
 
 
             beforeSend: function (xhr) {
