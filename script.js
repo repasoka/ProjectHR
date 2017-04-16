@@ -145,8 +145,9 @@ $.ajax({
 
 });
 
-//DATE PICKER
-$("#inpdate").datepicker(); 
+//DATE AND TIME PICKERS
+$("#inpdate").datepicker();
+$("#inptime").timepicker({startTime: '8:00'}); 
 
 $("#saveNI").click(function () {
         var root = 'http://localhost:8081/api';
