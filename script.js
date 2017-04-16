@@ -73,6 +73,9 @@ $("#itw2, #headrow2").hide();
 $("#itw2, #headrow2").show();
 $("#contentmyinterview, #headrow").hide();
 
+//prevent duplicate options
+$("#position, #location, #room, #assigned").empty();
+
 var root = 'http://localhost:8081/api';
 
 //LOADING POSITIONS
