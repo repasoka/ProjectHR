@@ -126,6 +126,22 @@ $.ajax({
           
             });  
 
+//LOADING PERSONS
+$.ajax({
+
+            url: root + '/users/',
+            method: 'GET',
+            data:JSON.parse,
+             beforeSend : function( xhr ) {
+            xhr.setRequestHeader( 'Authorization', 'BEARER ' +  token );
+        }
+
+            }).then(function(data) {
+            for (var i=0; i<data.length;i++){
+            $("#assigned").append("<option>"+data[i].loginName+ "</option>");
+        }
+          
+            });     
 
 });
 
