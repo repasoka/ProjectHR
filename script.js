@@ -72,6 +72,27 @@ $("#itw2, #headrow2").hide();
       $("#btnnewinterview").click(function(){
 $("#itw2, #headrow2").show();
 $("#contentmyinterview, #headrow").hide();
+
+var root = 'http://localhost:8081/api';
+
+//LOADING POSITIONS
+$.ajax({
+
+            url: root + '/positions/',
+            method: 'GET',
+            data:JSON.parse,
+             beforeSend : function( xhr ) {
+            xhr.setRequestHeader( 'Authorization', 'BEARER ' +  token );
+        }
+
+            }).then(function(data) {
+            for (var i=0; i<data.length;i++){
+            $("#position").append("<option>"+data[i]+ "</option>");
+        }
+          
+            });
+
+
 });
 
 
