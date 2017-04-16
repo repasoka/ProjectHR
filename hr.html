@@ -179,12 +179,21 @@
     <div class="mui-container-fluid">
     <div id= "footerrow" class="mui-row">
    <button id= "cancelNI" class="mui-btn mui-btn--raised">CANCEL</button>
-   <button id= "saveNI" class="mui-btn mui-btn--raised">SAVE</button>
+   <button id= "saveNI" class="mui-btn mui-btn--raised"  data="#modalwindow" >SAVE</button>
     </div>
 </div>
   </div>
 
-   
+   <div id="modalwindow">
+      <div id="shW" class="showWindow">
+        <div id="windowhead">
+          <p id="windowtitle">attention</p>
+          <span class="closewindow">&times;</span>
+        </div>
+        <p id="modaltext"></p>
+        <button id="closeOK">OK</button>  
+      </div>
+    </div> 
    
 
   </body>

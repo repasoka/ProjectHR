@@ -168,6 +168,19 @@ $("#saveNI").click(function () {
 
         var assigned = $("#inpassignedperson").val();
 
+var re;
+
+re=/^(\D)/;
+valid=re.test(firstname);
+if (valid==false){      //warning if name input is empty 
+     $("#modaltext").text("Letters are required!");
+      var message = $(this).attr("data");
+      $(message).fadeIn("fast"); 
+      $(message).find(".closewindow, #closeOK").click(function(){
+        $(message).fadeOut("fast");
+      });             
+    }
+
         var objcandidate = {
             "candidate": {
                 "firstName": firstname,
