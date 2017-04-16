@@ -141,11 +141,12 @@ $.ajax({
             $("#assigned").append("<option>"+data[i].loginName+ "</option>");
         }
           
-            });     
+            });
 
 });
 
-
+//DATE PICKER
+$("#inpdate").datepicker(); 
 
 $("#saveNI").click(function () {
         var root = 'http://localhost:8081/api';
