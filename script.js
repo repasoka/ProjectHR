@@ -92,6 +92,23 @@ $.ajax({
           
             });
 
+//LOADING LOCATIONS
+$.ajax({
+
+            url: root + '/locations/',
+            method: 'GET',
+            data:JSON.parse,
+             beforeSend : function( xhr ) {
+            xhr.setRequestHeader( 'Authorization', 'BEARER ' +  token );
+        }
+
+            }).then(function(data) {
+            for (var i=0; i<data.length;i++){
+            $("#location").append("<option>"+data[i]+ "</option>");
+        }
+          
+            });           
+
 
 });
 
