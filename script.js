@@ -109,6 +109,23 @@ $.ajax({
           
             });           
 
+//LOADING ROOMS in KOSICE
+$.ajax({
+
+            url: root + '/locations/KOSICE/rooms/',
+            method: 'GET',
+            data:JSON.parse,
+             beforeSend : function( xhr ) {
+            xhr.setRequestHeader( 'Authorization', 'BEARER ' +  token );
+        }
+
+            }).then(function(data) {
+            for (var i=0; i<data.length;i++){
+            $("#room").append("<option>"+data[i]+ "</option>");
+        }
+          
+            });  
+
 
 });
 
