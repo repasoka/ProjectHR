@@ -143,7 +143,6 @@ $("#inptime").timepicker({startTime: '8:00'});
 
 $("#saveNI").click(function () {
         var root = 'http://localhost:8081/api';
-
         var firstname = $("#inpname").val();
         var lastname = $("#inpsurname").val();
         var phone = $("#inpphone").val();
@@ -179,17 +178,45 @@ alert("bla1");
             }
         };
 alert("bla3");
-   re=/^(\D)$/;
+ re=/^[a-zA-Z]/;
 valid=re.test(firstname);
+valid=re.test(lastname);
 if (valid==false){      //warning if name input is empty 
-     $("#modalWarning").text("Name must by letters!");
+     $("#modalWarning").text("First name and last name must by letters!");
       var message = $(this).attr("data");
       $(message).fadeIn("fast"); 
       $(message).find(".closeBox, #closeOK").click(function(){
         $(message).fadeOut("fast");
+
       });         
    
-    }     
+    }    
+ re=/^[_a-zA-Z0-9\.\-]+@[_a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,4}$/;
+valid=re.test(email);
+
+if (valid==false){      //warning if name input is empty 
+     $("#modalWarning").text("Email is incorrect!");
+      var message = $(this).attr("data");
+      $(message).fadeIn("fast"); 
+      $(message).find(".closeBox, #closeOK").click(function(){
+        $(message).fadeOut("fast");
+
+      });         
+   
+    } 
+ re=/^[ 0-9\.\+\/\-]{8,}$/;
+valid=re.test(phone);
+
+if (valid==false){      //warning if name input is empty 
+     $("#modalWarning").text("Phone number is incorrect!");
+      var message = $(this).attr("data");
+      $(message).fadeIn("fast"); 
+      $(message).find(".closeBox, #closeOK").click(function(){
+        $(message).fadeOut("fast");
+
+      });         
+   
+    } 
 
 
 alert("bla2");
