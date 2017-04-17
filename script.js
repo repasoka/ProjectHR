@@ -51,18 +51,7 @@ var root = 'http://localhost:8081/api';
         
     });
 
-          $("#buttonmodalwindow").click (function activateModal() {
-   
-    var modalEl = document.createElement('div');
-    modalEl.style.width = '600px';
-    modalEl.style.height = '500px';
-    modalEl.style.margin = '100px auto';
-    modalEl.style.backgroundColor = '#fff';
-    modalEl.style.h2 = 'Candidate'
-    mui.overlay('on', modalEl);
-  });
 
-  
 
 
        $("#btnmyinterview").click(function(){
@@ -168,20 +157,12 @@ $("#saveNI").click(function () {
 
         var assigned = $("#inpassignedperson").val();
 
-var re;
 
-re=/^(\D)/;
-valid=re.test(firstname);
-if (valid==false){      //warning if name input is empty 
-     $("#modaltext").text("Letters are required!");
-      var message = $(this).attr("data");
-      $(message).fadeIn("fast"); 
-      $(message).find(".closewindow, #closeOK").click(function(){
-        $(message).fadeOut("fast");
-      });             
-    }
+var valid, re;
 
-        var objcandidate = {
+
+alert("bla1");
+        var data = {     //object declaration 
             "candidate": {
                 "firstName": firstname,
                 "lastName": lastname,
@@ -196,9 +177,19 @@ if (valid==false){      //warning if name input is empty
                 "room": room,
                 
             }
-        }
-
-         
+        };
+alert("bla3");
+   re=/^(\D)$/;
+valid=re.test(firstname);
+if (valid==false){      //warning if name input is empty 
+     $("#modalWarning").text("Name must by letters!");
+      var message = $(this).attr("data");
+      $(message).fadeIn("fast"); 
+      $(message).find(".closeBox, #closeOK").click(function(){
+        $(message).fadeOut("fast");
+      });         
+   
+    }     
 
 
 alert("bla2");
@@ -206,18 +197,18 @@ alert("bla2");
             url: root + '/interviews',
             type: 'POST',
             contentType: 'application/json',
-           data: JSON.stringify(objcandidate),
-
+           data: JSON.stringify(data),
+          
 
             beforeSend: function (xhr) {
                 xhr.setRequestHeader('Authorization', 'BEARER ' + token);
             },
-            success: function (objcandidate) {
-                console.log(objcandidate);
+            success: function (data) {
+                console.log(data);
                 alert("bla");
             },
-            error: function (objcandidate) {
-                console.log(objcandidate);
+            error: function (data) {
+                console.log(data);
                 alert("post failed");
             }
         });
@@ -231,6 +222,7 @@ alert("bla2");
      $.ajax({
         url: root +'/auth/logout/',
         type:'POST',
+
          beforeSend : function( xhr ) {
             xhr.setRequestHeader( 'Authorization', 'BEARER ' +  token );
         },

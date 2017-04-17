@@ -20,7 +20,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
  </head>
  <body>
+<div id="overlayBox">
+      <div id="boxReg" class="showWindow">
+        <div id="boxHead">
+          <p id="warningHead">Warning</p>
+          <span class="closeBox">&times;</span>
+        </div>
+        <p id="modalWarning"></p>
+        <button id="closeOK">OK</button>  
+      </div>
+    </div>  
 <div id="log">
+
   <div class="mui-container-fluid"> 
   <div class="mui-row">
     <div class="mui-col-xs-6 mui-col-md-4"></div>
@@ -111,7 +122,7 @@
        </tr>
   </table>
   <p id="demo">paragraf:</p>
-  <button id="buttonmodalwindow" class="mui-btn mui-btn--flat" onclick="activateModal()">modalwindow</button>
+ 
 </div>
 </div>
     </div>
@@ -179,21 +190,12 @@
     <div class="mui-container-fluid">
     <div id= "footerrow" class="mui-row">
    <button id= "cancelNI" class="mui-btn mui-btn--raised">CANCEL</button>
-   <button id= "saveNI" class="mui-btn mui-btn--raised"  data="#modalwindow" >SAVE</button>
+   <button id= "saveNI" class="mui-btn mui-btn--raised"  data="#overlayBox" >SAVE</button>
     </div>
 </div>
   </div>
 
-   <div id="modalwindow">
-      <div id="shW" class="showWindow">
-        <div id="windowhead">
-          <p id="windowtitle">attention</p>
-          <span class="closewindow">&times;</span>
-        </div>
-        <p id="modaltext"></p>
-        <button id="closeOK">OK</button>  
-      </div>
-    </div> 
+   
    
 
   </body>

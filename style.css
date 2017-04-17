@@ -229,6 +229,8 @@ margin-bottom: 20px;
     width: 15%;
 background-color: #CDDC30;
 }
+ 
+
 @media only screen and (min-width: 600px) {
     /* For tablets: */
     .col-m-1 {width: 8.33%;}
@@ -259,7 +261,7 @@ background-color: #CDDC30;
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 }
- #modalwindow{
+  #overlayBox{
     width: 100%;
     height:100%;
     background-color: rgba(40, 40, 40, 0.5);
@@ -269,26 +271,26 @@ background-color: #CDDC30;
     display: none;
     overflow: auto;
   }
-  #shW, #boxStockIn{
+  #boxReg, #boxStockIn{
     width: 33%;
     height: 25%;
     margin: 13% auto;
-    background-color: #bdbdbd;
+    background-color: white;
     border-radius: 2px;
     border: 2px solid #777;  
   }
-  #windowhead{
+  #boxHead{
     height:18%;
     width:100%;
-    background: linear-gradient(to top, #FFFFFF, #F5F5F5, #DCDCDC, #C0C0C0, #A9A9A9, #777, #696969);
+    background: #CDDC30;
   }
-  #windowtitle{
-    font-family: tahoma;
+  #warningHead{
+    font-family: Arial;
     font-size: 18px;
     margin-left: 2%;
     color:black;    
   } 
-  .closewindow{
+  .closeBox{
     cursor: pointer;
     font-size: 30px;
     margin-top: -9.2%;
@@ -296,8 +298,8 @@ background-color: #CDDC30;
     float: right;
     color: black;
   } 
-  #modaltext{
-    font-size: 13px;   
+  #modalWarning{
+    font-size: 18px;   
     color: black;
     text-align: center;
     margin-top: 8%;
@@ -308,5 +310,6 @@ background-color: #CDDC30;
     width: 20%;
     border-radius: 2px;
     color: black;
+    background-color:#CDDC30; 
     font-weight: bold;
 }
