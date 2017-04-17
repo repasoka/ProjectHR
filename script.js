@@ -138,8 +138,8 @@ $.ajax({
 });
 
 //DATE AND TIME PICKERS
-$("#inpdate").datepicker();
-$("#inptime").timepicker({startTime: '8:00'}); 
+$("#inpdate").datepicker({dateFormat: 'yy-mm-dd'});
+$("#inptime").timepicker({timeFormat: 'HH:mm', startTime: '8:00'}); 
 
 $("#saveNI").click(function () {
         var root = 'http://localhost:8081/api';
@@ -148,19 +148,18 @@ $("#saveNI").click(function () {
         var phone = $("#inpphone").val();
         var email = $("#inpemail").val();
         var skype = $("#inpskype").val();
-        var dateTime = $("#inpdate").val();
+        var date = $("#inpdate").val();
         var time = $("#inptime").val();
         var position = $("#inpposition").val();
         var location = $("#inplocation").val();
         var room = $("#inproom").val();
-
         var assigned = $("#inpassignedperson").val();
-
+        var dateTime = date + "T" + time +"Z";
 
 var valid, re;
 
 
-alert("bla1");
+
         var data = {     //object declaration 
             "candidate": {
                 "firstName": firstname,
@@ -177,7 +176,7 @@ alert("bla1");
                 
             }
         };
-alert("bla3");
+
  re=/^[a-zA-Z]/;
 valid=re.test(firstname);
 valid=re.test(lastname);
@@ -219,7 +218,7 @@ if (valid==false){      //warning if name input is empty
     } 
 
 
-alert("bla2");
+
         $.ajax({
             url: root + '/interviews',
             type: 'POST',
@@ -232,7 +231,7 @@ alert("bla2");
             },
             success: function (data) {
                 console.log(data);
-                alert("bla");
+                alert("post successful");
             },
             error: function (data) {
                 console.log(data);
