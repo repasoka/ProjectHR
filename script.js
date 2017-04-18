@@ -1,7 +1,7 @@
  $(document).ready(function(){
 
        var token;
-      
+ 
 
        $("#logbtn").click(function(e){
           e.preventDefault();
@@ -23,40 +23,90 @@
         success:function(data){
             console.log(data);
             $("#itw, #headrow").show();
-            $("#log, #itw2, #editInterview2, #headrow2").hide();
+            $("#log, #itw2, #editInterview2, #headrow2, .modal").hide();
       
             token = data.token;
 var root = 'http://localhost:8081/api';
-           $.ajax({
+    var x;
+    var y;
 
-            url: root + '/locations/',
+          $.ajax({
+
+            url: root + '/interviews',
             method: 'GET',
-            data:JSON.parse,
+            data:{
+        limit: x,
+        start: y
+    },
              beforeSend : function( xhr ) {
             xhr.setRequestHeader( 'Authorization', 'BEARER ' +  token );
         }
 
             }).then(function(data) {
-            for (var i=0; i<data.length;i++){
-            $("#demo").append(data[i]+ "<br>");
-        }
-          
-            });
+
+              alert("bla");
+            $.each(data, function(key, value){
+         $("#demo").append(key+'<br>');
+           $.each(value, function(k,v){
+             $("#demo2").append(v.candidate+'<br>');
+              });
+        }); 
+            /*for (var i=0; i<data.length;i++){    
+            $("#demo").append(data[i].candidate+ "<br>");
+        }*/
+         
+
+});
+            
                     },
         error: function (data) {
             console.log(data);
             $("#logerror").text("Invalid Username or Password. Please try again.");
         }
+
         });
         
     });
+// Get the modal
+var modal = document.getElementById('modalWindow');
 
+// Get the button that opens the modal
+var openmodal = document.getElementById("edit");
 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
+// When the user clicks the button, open the modal 
+openmodal.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+/*$("#edit").click(function(){ 
+        $(".modal").fadeIn("fast");    
+    });
+
+$("#closemodal").click(function(){ 
+        $("#modalWindow").hide();    
+    });*/
+
+var root = 'http://localhost:8081/api';
 
        $("#btnmyinterview").click(function(){
 $("#contentmyinterview, #headrow").show();
 $("#itw2, #headrow2").hide();
+
 });
       $("#btnnewinterview").click(function(){
 $("#itw2, #headrow2").show();
@@ -64,6 +114,8 @@ $("#contentmyinterview, #headrow").hide();
 
 //prevent duplicate options
 $("#position, #location, #room, #assigned").empty();
+
+
 
 var root = 'http://localhost:8081/api';
 

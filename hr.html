@@ -114,7 +114,7 @@
       <th>Status</th>
       <th>Action</th>
       <i class="mdi mdi-delete mdi-24px mdi-dark"></i>
-      <i class="mdi mdi-border-color mdi-24px mdi-dark"></i>
+       <i id="edit" class="mdi mdi-border-color mdi-24px mdi-dark"></i>
        <i class="mdi mdi-phone mdi-24px mdi-dark"></i>
         <i class="mdi mdi-email mdi-24px mdi-dark"></i>
          <i class="mdi mdi-skype mdi-24px mdi-dark"></i>
@@ -122,7 +122,62 @@
        </tr>
   </table>
   <p id="demo">paragraf:</p>
- 
+  <p id="demo2">paragraf2:</p>
+
+ <div id="modalWindow" class="modal">
+      <div  class="modal-content">
+       <div class="mui-row">
+      <div id="leftModal" class="mui-col-md-6"> 
+      <div class="header">
+        <h2>Candidate</h2>
+        </div>
+        <div class="candidateBox"> 
+        <div class="picture">
+        <!--<img src="pisisvor.jpg">-->
+        </div>
+        <div class="info">
+        <p id="candidateName">name surname</p>
+        <p id="candidatePosition">position</p> 
+        </div>
+        </div>
+        <div class="leftIcons">
+        <p id="phoneNumber"><i class="mdi mdi-phone mdi-24px mdi-dark"></i> phone number</p><br>
+        <p id="emailAddress"><i class="mdi mdi-email mdi-24px mdi-dark"> </i> email address</p><br>
+        <p id="skype"><i class="mdi mdi-skype mdi-24px mdi-dark"></i> skype</p><br>
+        </div>
+      </div>
+
+      <div id="rightModal" class="mui-col-md-6">
+      <div class="header">
+        <h2>Interview</h2>
+        <div id="closeIcon" class="closeBox">
+         <span id="closemodal" class="close" >&times;</span>
+      </div>
+        </div>
+        <div class="interviewBox">
+          <h6>Date</h6>
+          <p id="interviewDate">date</p>
+          <h6>Time</h6>
+          <p id="interviewTime">time</p>
+          <h6>Location</h6>
+          <p id="interviewLoc">location</p>
+          <h6>Room</h6>
+          <p id="interviewRoom">room</p>
+          <h6>Assign Person</h6>
+          <p id="interviewAssign">assign person</p>
+          <h6>Notes</h6>
+          <div class="textWindow">
+          blabla   blabla   blabla   blabla
+        </div>
+        </div>
+        <div class="rightBottomIcons">
+        <i class="mdi mdi-delete mdi-24px mdi-dark"></i>
+       <i class="mdi mdi-border-color mdi-24px mdi-dark"></i>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
 </div>
 </div>
     </div>
