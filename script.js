@@ -26,37 +26,6 @@
             $("#log, #itw2, #editInterview2, #headrow2, .modal").hide();
       
             token = data.token;
-var root = 'http://localhost:8081/api';
-    var x;
-    var y;
-
-          $.ajax({
-
-            url: root + '/interviews',
-            method: 'GET',
-            data:{
-        limit: x,
-        start: y
-    },
-             beforeSend : function( xhr ) {
-            xhr.setRequestHeader( 'Authorization', 'BEARER ' +  token );
-        }
-
-            }).then(function(data) {
-
-              alert("bla");
-            $.each(data, function(key, value){
-         $("#demo").append(key+'<br>');
-           $.each(value, function(k,v){
-             $("#demo2").append(v.candidate+'<br>');
-              });
-        }); 
-            /*for (var i=0; i<data.length;i++){    
-            $("#demo").append(data[i].candidate+ "<br>");
-        }*/
-         
-
-});
             
                     },
         error: function (data) {
@@ -106,6 +75,26 @@ var root = 'http://localhost:8081/api';
        $("#btnmyinterview").click(function(){
 $("#contentmyinterview, #headrow").show();
 $("#itw2, #headrow2").hide();
+
+
+var root = 'http://localhost:8081/api';
+
+$.ajax({
+
+            url: root + '/interviews/',
+            method: 'GET',
+            data:JSON.parse,
+             beforeSend : function( xhr ) {
+            xhr.setRequestHeader( 'Authorization', 'BEARER ' +  token );
+        }
+
+            }).then(function(data) {
+                 for (var i=0; i<data.length;i++){
+               console.log(data);
+            $("#tableMyinterviews").append("<tr><td>"+data[i].candidate.firstName+" "+data[i].candidate.lastName+"</td><td>"+data[i].candidate.phone+"</td><td>"+data[i].candidate.email+ "</td><td>"+data[i].interview.status+"</td><td><i class='mdi mdi-delete mdi-24px mdi-dark'></i><i class='mdi mdi-border-color mdi-24px mdi-dark'></i></td></tr>");
+          
+          }
+            });
 
 });
       $("#btnnewinterview").click(function(){
